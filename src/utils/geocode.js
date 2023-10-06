@@ -5,7 +5,7 @@ const geocode = (address, callback) => {
 
     request({ url: url, json: true }, (error, response) => {
         if (error) {
-            callback('Please check ypur wifi connection 🌐', undefined)
+            callback('Please check your wifi connection 🌐', undefined)
         } else if (response.body.features.length === 0) {
             callback('No matches found, Try being more specific 😵', undefined)
         } else {

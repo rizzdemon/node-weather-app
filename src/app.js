@@ -39,6 +39,14 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/airports', (req, res) => {
+res.render('airports',{
+    epictext: 'testing',
+    title: 'test',
+    name: '123 test'
+})
+})
+
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
@@ -95,5 +103,5 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('Server is up on port' + port + '.')
+    console.log('Server is up and running on port ' + port + '!')
 })
